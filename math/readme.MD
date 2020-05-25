@@ -37,6 +37,6 @@
   - n,r,p を渡すと、nCr mod p を返します。
 
 - Divisor.java
-  - Factor,pow,Duvrekkyo をインポートしてください。
+  - Factor,pow,Divrekkyo をインポートしてください。
   - 約数を全列挙します。列挙順はソートされていません。 long で表せる最も多い約数を持つ数の全列挙でも AtCoder で 90ms 程度と非常に高速です。
-  - 約数前列挙した値を引数で渡すと、約数前列挙した ArrayList を返します。
+  - 約数全列挙した値を引数で渡すと、約数全列挙した ArrayList を返します。
