@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 class Divisor {
+
     public static void main(String[] args) {
         ArrayList<Integer> rek = Divrekkyo(1102701600); // -> #1440
         System.out.println(rek.size());
@@ -79,33 +80,23 @@ class Divisor {
     }
 
     public static int pow(int a, int b) { // a^b
-        if (b == 0) {
+        if (b == 0)
             return 1;
-        } else if (b == 1) {
-            return a;
-        } else {
-            if (b % 2 == 0) {
-                return pow(a, b / 2) * pow(a, b / 2);
-            } else if (b % 2 == 1) {
-                return pow(a, b - 1) * a;
-            }
+        if (b % 2 == 0) {
+            int t = pow(a, b / 2);
+            return t * t;
         }
-        return 1;
+        return a * pow(a, b - 1);
     }
 
     public static long pow(long a, long b) { // a^b
-        if (b == 0) {
+        if (b == 0L)
             return 1L;
-        } else if (b == 1) {
-            return (long) a;
-        } else {
-            if (b % 2 == 0) {
-                return pow(a, b / 2) * pow(a, b / 2);
-            } else if (b % 2 == 1) {
-                return pow(a, b - 1) * ((long) a);
-            }
+        if (b % 2L == 0L) {
+            long t = pow(a, b / 2L);
+            return t * t;
         }
-        return 1L;
+        return a * pow(a, b - 1L);
     }
 
     public static void Factor(long a, ArrayList<Long> p) {// long型用
