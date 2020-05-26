@@ -37,6 +37,12 @@
   - n,r,p を渡すと、nCr mod p を返します。
 
 - Divisor.java
+
   - Factor,pow,Divrekkyo をインポートしてください。
   - 約数を全列挙します。列挙順はソートされていません。 long で表せる最も多い約数を持つ数の全列挙でも AtCoder で 90ms 程度と非常に高速です。
   - 約数全列挙した値を引数で渡すと、約数全列挙した ArrayList を返します。
+
+- SegTree.java
+  - SegTree クラスをインポートしてください。
+  - RM(minimum)Q,RS(sum)Q のみ実装されている基本的なセグ木です。
+  - RMQ や RSQ のクエリを投げるとそれに相当する結果を返します。
